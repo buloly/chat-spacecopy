@@ -30,6 +30,8 @@ Things you may want to cover:
 |comments|string|null|
 |id|string|null|
 
+### Association
+<!-- コメントテーブルのアソシエーション -->
 
 ## membersテーブル
 
@@ -38,12 +40,28 @@ Things you may want to cover:
 |image|string|-------|
 |group_id|integer|-------|
 
+### Association
+<!-- メンバーテーブルのアソシエーション -->
+
+##  groupテーブル
+
+|Column|Type|Options|
+|name|string|-------|
+|image|string|-------|
+|group_id|integer|-------|
+
+### Association
+<!-- グループテーブルのアソシエーション -->
+
 ## usersテーブル
 
 |Column|Type|Options|
 |email|string|-------|
 |nickname|string|-------|
 |id|integer|-------|
+
+### Association
+<!-- ユーザーーテーブルのアソシエーション -->
 
 
 ### Association
