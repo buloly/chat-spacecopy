@@ -23,12 +23,28 @@ Things you may want to cover:
 
 * ...
 
+## commentsテーブル
+
+|Column|Type|Options|
+|title|string|null|
+|comments|string|null|
+|id|string|null|
+
+
 ## membersテーブル
 
 |Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|name|string|-------|
+|image|string|-------|
+|group_id|integer|-------|
+
+## usersテーブル
+
+|Column|Type|Options|
+|email|string|-------|
+|nickname|string|-------|
+|id|integer|-------|
+
 
 ### Association
 - belongs_to :group
