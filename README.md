@@ -33,6 +33,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
+comments -- comments_user_members -- members
 <!-- コメントテーブルのアソシエーション -->
 
 ## membersテーブル
@@ -44,6 +45,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
+
 
 <!-- メンバーテーブルのアソシエーション -->
 
@@ -57,6 +59,8 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :member
+groups -- groups_user_members -- members
+
 <!-- グループテーブルのアソシエーション -->
 
 ## usersテーブル
