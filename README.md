@@ -27,24 +27,26 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text|text|-------|
+|user_id|integer|-------|
+
 
 ### Association
 - belongs_to :user
-comments -- comments_user_members -- members
+
+
 <!-- コメントテーブルのアソシエーション -->
 
 ## membersテーブル
 
 |Column|Type|Options|
-|name|string|-------|
-|image|string|-------|
+|user_id|integer|-------|
 |group_id|integer|-------|
 
 ### Association
 - belongs_to :user
+- belongs_to :group
+user -- members -- group
 
 
 <!-- メンバーテーブルのアソシエーション -->
@@ -53,13 +55,11 @@ comments -- comments_user_members -- members
 
 |Column|Type|Options|
 |name|string|-------|
-|image|string|-------|
-|group_id|integer|-------|
+
 
 ### Association
-- belongs_to :user
-- belongs_to :member
-groups -- groups_user_members -- members
+- has_many_ :users
+
 
 <!-- グループテーブルのアソシエーション -->
 
@@ -72,12 +72,11 @@ groups -- groups_user_members -- members
 
 ### Association
 - has_many :comments
+- has_many :members
+- has_many :users
 <!-- ユーザーーテーブルのアソシエーション -->
 
 
 
 
 
-### Association
-- belongs_to :group
-- belongs_to :user
