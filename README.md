@@ -26,11 +26,13 @@ Things you may want to cover:
 ## commentsテーブル
 
 |Column|Type|Options|
-|title|string|null|
-|comments|string|null|
-|id|string|null|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
+- belongs_to :user
 <!-- コメントテーブルのアソシエーション -->
 
 ## membersテーブル
@@ -41,9 +43,11 @@ Things you may want to cover:
 |group_id|integer|-------|
 
 ### Association
+- belongs_to :user
+
 <!-- メンバーテーブルのアソシエーション -->
 
-##  groupテーブル
+##  groupsテーブル
 
 |Column|Type|Options|
 |name|string|-------|
@@ -51,6 +55,8 @@ Things you may want to cover:
 |group_id|integer|-------|
 
 ### Association
+- belongs_to :user
+- belongs_to :member
 <!-- グループテーブルのアソシエーション -->
 
 ## usersテーブル
@@ -61,7 +67,11 @@ Things you may want to cover:
 |id|integer|-------|
 
 ### Association
+- has_many :comments
 <!-- ユーザーーテーブルのアソシエーション -->
+
+
+
 
 
 ### Association
