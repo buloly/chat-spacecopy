@@ -28,8 +28,9 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |text|text|-------|
+|image|text|-------|
 |user_id|integer|-------|
-
+|group_id|integer|-------|
 
 ### Association
 - belongs_to :user
@@ -58,7 +59,8 @@ user -- members -- group
 
 
 ### Association
-- has_many_ :users
+- has_many_ :users, through: :members
+
 
 
 <!-- グループテーブルのアソシエーション -->
@@ -68,12 +70,13 @@ user -- members -- group
 |Column|Type|Options|
 |email|string|-------|
 |nickname|string|-------|
-|id|integer|-------|
+
 
 ### Association
 - has_many :comments
 - has_many :members
-- has_many :users
+- has_many :groups, through: :members
+
 <!-- ユーザーーテーブルのアソシエーション -->
 
 
