@@ -29,8 +29,8 @@ Things you may want to cover:
 |------|----|-------|
 |text|text|-------|
 |image|text|-------|
-|user_id|integer|-------|
-|group_id|integer|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 <!-- コメントテーブルのアソシエーション -->
 ### Association
@@ -57,11 +57,13 @@ user -- members -- group
 ##  groupsテーブル
 
 |Column|Type|Options|
-|name|string|-------|
+|name|string|null: false|
 
 <!-- グループテーブルのアソシエーション -->
 ### Association
-- has_many_ :users, through: :members
+- has_many :users, through: :members
+- has_many :comments
+- has_many :members
 
 
 
