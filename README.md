@@ -32,11 +32,13 @@ Things you may want to cover:
 |user_id|integer|-------|
 |group_id|integer|-------|
 
+<!-- コメントテーブルのアソシエーション -->
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 
-<!-- コメントテーブルのアソシエーション -->
+
 
 ## membersテーブル
 
@@ -44,26 +46,26 @@ Things you may want to cover:
 |user_id|integer|-------|
 |group_id|integer|-------|
 
+<!-- メンバーテーブルのアソシエーション -->
 ### Association
 - belongs_to :user
 - belongs_to :group
 user -- members -- group
 
 
-<!-- メンバーテーブルのアソシエーション -->
 
 ##  groupsテーブル
 
 |Column|Type|Options|
 |name|string|-------|
 
-
+<!-- グループテーブルのアソシエーション -->
 ### Association
 - has_many_ :users, through: :members
 
 
 
-<!-- グループテーブルのアソシエーション -->
+
 
 ## usersテーブル
 
@@ -71,13 +73,13 @@ user -- members -- group
 |email|string|-------|
 |nickname|string|-------|
 
-
+<!-- ユーザーーテーブルのアソシエーション -->
 ### Association
 - has_many :comments
 - has_many :members
 - has_many :groups, through: :members
 
-<!-- ユーザーーテーブルのアソシエーション -->
+
 
 
 
