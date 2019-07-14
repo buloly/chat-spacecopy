@@ -43,8 +43,8 @@ Things you may want to cover:
 ## membersテーブル
 
 |Column|Type|Options|
-|user_id|integer|-------|
-|group_id|integer|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 <!-- メンバーテーブルのアソシエーション -->
 ### Association
@@ -70,8 +70,8 @@ user -- members -- group
 ## usersテーブル
 
 |Column|Type|Options|
-|email|string|-------|
-|nickname|string|-------|
+|email|string| null: false, unique: true|
+|nickname|string|null: false|
 
 <!-- ユーザーーテーブルのアソシエーション -->
 ### Association
