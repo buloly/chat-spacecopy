@@ -1,0 +1,44 @@
+.header {
+  
+  background-color: #f51010;
+  color: #fff;
+  height: 80px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+}
+.header__lists{
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.sidebar {
+  background-color: #1804f2;
+  height: 700px;
+  width: 300px;
+  display: flex;
+}
+
+.contents {
+  background-color: #6868da;
+  height: 1000px;
+}
+
+
+.footer {
+  background-color: #2e28ac;
+  height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
